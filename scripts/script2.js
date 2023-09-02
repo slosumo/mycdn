@@ -1,2 +1,2 @@
-const SCRIPT_VERSION = "1.0.0.0";
-console.log("script 2 loaded, version: " + SCRIPT_VERSION);
+const SCRIPT2_VERSION = "1.0.0.1";
+console.log("script 2 loaded, version: " + SCRIPT2_VERSION);
