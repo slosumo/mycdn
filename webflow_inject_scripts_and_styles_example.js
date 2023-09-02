@@ -1,15 +1,15 @@
 function injectInjectionScript() {
     const webflowURLs = {
-        //production: 'https://www.littlebigthings.dev/', // production URL for your Webflow site
-        //staging: 'https://lil-big-things.webflow.io/' // staging URL for your Webflow site
-        production: 'http://localhost/mycdn/', // production URL for your Webflow site
-        staging: 'http://localhost/mycdn/' // staging URL for your Webflow site
+        production: 'https://www.littlebigthings.dev/', // production URL for your Webflow site
+        staging: 'https://lil-big-things.webflow.io/' // staging URL for your Webflow site
+        //production: 'http://localhost/mycdn/', // production URL for your Webflow site
+        //staging: 'http://localhost/mycdn/' // staging URL for your Webflow site
     };
     const CDNURLs = {
-        //production: 'https://custom-code-for-webflow.pages.dev/', // production URL for your custom code on CloudFlare CDN
-        //staging: 'https://staging.custom-code-for-webflow.pages.dev/' // staging URL for your custom code on CloudFlare CDN
-        production: '/', // for local testing
-        staging: '/'  // for local testing
+        production: 'https://custom-code-for-webflow.pages.dev/', // production URL for your custom code on CloudFlare CDN
+        staging: 'https://staging.custom-code-for-webflow.pages.dev/' // staging URL for your custom code on CloudFlare CDN
+        //production: '/', // for local testing
+        //staging: '/'  // for local testing
     };
 
     let globalAssetVersion = '1'; // TODO change this to ensure that all scripts' and stylesheets' cache is properly overridden
