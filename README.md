@@ -1,0 +1,2 @@
+# mycdn
+My Custom CDN
