@@ -6,8 +6,9 @@ function injectInjectionScript() {
         //staging: 'http://localhost/mycdn/' // staging URL for your Webflow site
     };
     const CDNURLs = {
-        production: 'https://custom-code-for-webflow.pages.dev/', // production URL for your custom code on CloudFlare CDN
-        staging: 'https://staging.custom-code-for-webflow.pages.dev/' // staging URL for your custom code on CloudFlare CDN
+        // TODO these are currently the same, but can be different once correct domain is assigned ot them
+        production: 'https://mycdn-a0a.pages.dev/', // production URL for your custom code on CloudFlare CDN
+        staging: 'https://mycdn-a0a.pages.dev/' // staging URL for your custom code on CloudFlare CDN
         //production: '/', // for local testing
         //staging: '/'  // for local testing
     };
@@ -64,13 +65,14 @@ function injectInjectionScript() {
     const productionHost = new URL(webflowURLs.production).hostname;
     const stagingHost = new URL(webflowURLs.staging).hostname;
     const url = window.location.hostname;
+    const useStagingByDefault = true; // if set to true, staging scripts will always be loaded (I.e. useful for testing, and not having to adjust the cdn & webflow url constantly)
     if (url === productionHost) {
         const assetURLs = assets.production.map(asset => ({
             url: asset.type === 'script' ? `${CDNURLs.production}${asset.path}` : `${CDNURLs.production}${asset.path}`,
             type: asset.type,
         }));
         Promise.all(assetURLs.map(injectAsset)).then(() => console.log('All production assets loaded successfully'));
-    } else if (url === stagingHost) {
+    } else if (useStagingByDefault || url === stagingHost) {
         const assetURLs = assets.staging.map(asset => ({
             url: asset.type === 'script' ? `${CDNURLs.staging}${asset.path}` : `${CDNURLs.staging}${asset.path}`,
             type: asset.type,
