@@ -1,3 +1,3 @@
 # mycdn
 My Custom CDN
-addition JWD*
++ toevoeging van JWD
