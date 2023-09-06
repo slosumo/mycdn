@@ -1,3 +1,3 @@
 # mycdn
 My Custom CDN
-+ toevoeging van JWD
++ toevoeging van JWD!
