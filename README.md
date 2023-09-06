@@ -1,3 +1,3 @@
 # mycdn
 My Custom CDN
-note JWD
+addition JWD
