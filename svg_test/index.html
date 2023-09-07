@@ -8,6 +8,14 @@
 				justify-content: center;
 				align-items: center;
 			}
+            .holder > div {
+                width: 80%;
+            }
+            .my-test-holder {
+                padding: 20px;
+                border: 1px solid;
+                display: flex;
+            }
 			.my-icon {
 				color: red;
 				font-size: 30em;
@@ -40,27 +48,40 @@
 			}
 		</style>
 		<script src="https://kit.fontawesome.com/ac45735d1a.js" crossorigin="anonymous"></script>
+        <!--<script src="https://kit.fontawesome.com/cdc4236bfd.js" crossorigin="anonymous"></script>-->
 	</head>
 	<body>
 		<p>Some title</p>
 			<div class="holder">
-				<!-- using FA icons -> note that huge svgs can't be uploaded there! With some example, of coloring and increasing them -->
-				<i class="fa-kit fa-propaangas"></i>
-				<i class="fa-kit fa-propaangas my-icon"></i>
-				
-				<i class="fa-kit fa-icon-general"></i>
-				<i class="fa-kit fa-icon-general my-icon"></i>
-				
-				<div class="holder2">
-					<!-- using background-color & mask -> requires svgs hosted somewhere - note that if the div  contains any additional elements, those will be masked (cut off as per svg shape) as well.
-					*-->
-					<div class="svgimg"></div>
-					<div class="svgimg text">Example with text cut off</div>
-					
-					<!-- if we instead put the svg as another :before elemnt, stretching to the size of the parent, then the mask of the :before will not affect the parent's content -->
-					<div class="svgimg2 text-not-cutoff">Example with text NOT cut off (svg part of background of :before) </div>
+                <div>
+                    <div class="my-test-holder">
+                        <i class="fa-solid fa-tree"></i>
+                        <i class="fa-solid fa-tree"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-kit fa-propaangas"></i>
+                        <div class="fa-thin fa-diagram-subtask"></div>
+                    </div>
 
-				</div>
+                    <div class="my-test-holder">
+                        <!-- using FA icons -> note that huge svgs can't be uploaded there! With some example, of coloring and increasing them -->
+                        <i class="fa-kit fa-propaangas"></i>
+                        <i class="fa-kit fa-propaangas my-icon"></i>
+
+                        <i class="fa-kit fa-icon-general"></i>
+                        <i class="fa-kit fa-icon-general my-icon"></i>
+
+                        <div class="holder2">
+                            <!-- using background-color & mask -> requires svgs hosted somewhere - note that if the div  contains any additional elements, those will be masked (cut off as per svg shape) as well.
+                            *-->
+                            <div class="svgimg"></div>
+                            <div class="svgimg text">Example with text cut off</div>
+
+                            <!-- if we instead put the svg as another :before elemnt, stretching to the size of the parent, then the mask of the :before will not affect the parent's content -->
+                            <div class="svgimg2 text-not-cutoff">Example with text NOT cut off (svg part of background of :before) </div>
+
+                        </div>
+                    </div>
+                </div>
 			</div>
 	</body>
 </html>
